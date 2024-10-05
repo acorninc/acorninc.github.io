@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .team-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 30px;
+            padding: 20px;
+            white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .team-member {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            animation: fadeIn 1s ease-out;
+            transition: transform 0.3s ease-in-out;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+        .team-member h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .team-member h4 {
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        .team-member p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .team-member a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .team-container::-webkit-scrollbar {
+            display: none;
+        }
+        .team-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="hari.jpg" alt="Hariprasad Aji">
+            <h3>Hariprasad Aji</h3>
+            <p><strong>Email:</strong> <a href="mailto:ramk487574@gmail.com">ramk487574@gmail.com</a></p>
+            <h4>UI/UX Designer</h4>
+        </div>
+
+        <div class="team-member">
+            <img src="anto.jpg" alt="Antony Victor S">
+            <h3>Antony Victor S</h3>
+            <p><strong>Email:</strong> <a href="mailto:anto_vs@outlook.com">anto_vs@outlook.com</a></p>
+            <h4>UI/UX Designer</h4>
+        </div>
+
+        <div class="team-member">
+            <img src="aszi.jpg" alt="Asif CA">
+            <h3>Asif CA</h3>
+            <p><strong>Email:</strong> <a href="mailto:asifanwar2006@gmail.com">asifanwar2006@gmail.com</a></p>
+            <h4>UI/UX Designer</h4>
+        </div>
+
+        <div class="team-member">
+            <img src="sanji.jpg" alt="Sanchith R Panicker">
+            <h3>Sanchith R Panicker</h3>
+            <p><strong>Email:</strong> <a href="mailto:sanchithbhagath10@gmail.com">sanchithbhagath10@gmail.com</a></p>
+            <h4>UI/UX Designer</h4>
+        </div>
+    </div>
+
+</body>
+</html>
