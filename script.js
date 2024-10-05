@@ -23,20 +23,25 @@ async function fetchUSGSData() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(requestBody) // convert JavaScript object to JSON string
+            body: JSON.stringify(requestBody)  
+ // convert JavaScript object to JSON string
         });
-        
-        // Parse the JSON response
-        const data = await response.json();
-        
+
         if (response.ok) {
+            // Parse the JSON response
+            const data = await response.json();
             // Successfully retrieved the data
             window.alert('Data:', data);
         } else {
-            // Error handling
-            window.alert('Error:', data.message);
+            // Handle non-OK response status
+            const errorText = await response.text(); // Get the error message as text
+            window.alert('Error:', errorText);
         }
     } catch (error) {
-        window.alert('Fetch error:', error);
+        if (error instanceof NetworkError) {
+            window.alert('Network Error: Check your internet connection');
+        } else {
+            window.alert('Fetch error:', error);
+        }
     }
 }
